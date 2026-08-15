@@ -26,3 +26,284 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
 }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #222;
+}
+ 
+h1 {
+  text-align: center;
+  margin: 24px 16px 4px;
+  color: #222;
+}
+ 
+h3 {
+  text-align: center;
+  margin: 0 16px 20px;
+  font-weight: normal;
+  color: #555;
+}
+ 
+/* Search bar */
+#countryInput {
+  display: block;
+  margin: 0 auto;
+  width: min(90%, 360px);
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  box-sizing: border-box;
+}
+ 
+body > button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333333;
+  color: white;
+  border: 1px solid #333333;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+ 
+body > button:hover {
+  background-color: #111111;
+}
+ 
+/* Center the search row */
+#countryInput,
+body > button {
+  vertical-align: top;
+}
+ 
+body > p {
+  text-align: center;
+  max-width: 640px;
+  margin: 16px auto;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0 16px;
+}
+ 
+/* Status / error messages */
+#status {
+  text-align: center;
+  min-height: 1.2em;
+  margin: 8px 16px;
+  font-weight: 600;
+  color: #333;
+}
+ 
+.status-error {
+  color: #b00020;
+}
+ 
+/* Results grid */
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+ 
+/* Country card */
+.country-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+.country-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+ 
+.country-flag {
+  width: 72px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #eee;
+  flex-shrink: 0;
+}
+ 
+.country-name {
+  margin: 0;
+  font-size: 1.3rem;
+}
+ 
+.country-official-name {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+ 
+/* Country data grid (flag stats) */
+.country-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+ 
+.country-data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+ 
+.data-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #999;
+}
+ 
+.data-value {
+  font-size: 0.95rem;
+  color: #222;
+  font-weight: 500;
+}
+ 
+/* Weather section */
+.weather-section {
+  border-top: 1px solid #eee;
+  padding-top: 14px;
+}
+ 
+.weather-toggle-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+ 
+.weather-toggle-btn:hover:not(:disabled) {
+  background-color: #111111;
+}
+ 
+.weather-toggle-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+ 
+.weather-details {
+  margin-top: 14px;
+}
+ 
+.weather-loading,
+.weather-error {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+ 
+.weather-error {
+  color: #b00020;
+}
+ 
+.weather-current {
+  text-align: center;
+}
+ 
+.weather-current h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #333;
+}
+ 
+.weather-current-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+ 
+.weather-emoji {
+  font-size: 2rem;
+}
+ 
+.weather-temp {
+  font-size: 2rem;
+  font-weight: 700;
+}
+ 
+.weather-description {
+  margin: 4px 0 12px;
+  color: #666;
+}
+ 
+.weather-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  text-align: left;
+}
+ 
+.forecast-heading {
+  margin: 18px 0 10px;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+ 
+.forecast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+ 
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: #f4f6f8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  min-width: 90px;
+}
+ 
+.forecast-date {
+  font-weight: 600;
+  color: #333;
+}
+ 
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #888;
+  font-size: 0.8rem;
+}
+ 
+.api-key-note {
+  font-size: 0.8rem;
+  color: #b06a00;
+  background: #fff6e5;
+  border: 1px solid #ffdca0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  max-width: 640px;
+}
+ 
+.api-key-note code {
+  background: #fff0d1;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
